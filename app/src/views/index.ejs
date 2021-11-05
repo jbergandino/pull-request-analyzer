@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redox Exercise</title>
+</head>
+<body>
+    <% if (typeof source !== "undefined" && typeof json !== "undefined") { %>
+        <p><strong>Data Source: </strong><%= source %></p>
+        <p><strong>Total Pull-Request Count: </strong><%= json.total_count %></p>
+
+    <% } else { %>
+        <p><strong>Missing required data!</strong></p>
+    <% } %>
+
+    <% if (typeof errorMessage !== "undefined") { %>
+        <p><strong style="color:red;">Error:</strong> <%= errorMessage %></p>
+    <% } %>
+</body>
+</html>

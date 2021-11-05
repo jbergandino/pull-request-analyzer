@@ -1,0 +1,13 @@
+version: "3"
+services:
+  redis-server-redox: 
+    image: 'redis'
+    restart: always
+  app:
+    build: .
+    command: "nodemon /src/index.js"
+    volumes:
+      - "./src/:/src/"
+    ports:
+      - "8080:8080"
+    restart: always
